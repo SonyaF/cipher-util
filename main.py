@@ -20,7 +20,6 @@ def main():
         raise
 
 
-#  Yeah we should definitely use a keyed alphabet for encrypting the plaintext. Dont wanna make things too easy now do we
 def createVigenereTable(keyword):
     alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     keyword = keyword.upper()
@@ -32,13 +31,28 @@ def createVigenereTable(keyword):
         table.append(alphabet[i:] + alphabet[:i])
     return table
 
+def hasDuplicateLetter(text):
+    seen = set()
+    for char in text:
+        if char in seen:
+            return True
+        seen.add(char)
+    return False
 
 def createNormalVigenereTable():
     alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     table = []
     for i in range(26):
         table.append(alphabet[i:] + alphabet[:i])
-    return table
+    return 
+    
+def validateInput(text):
+    for char in text:
+        if not (char.isalpha() or char == ' '):
+            return False
+    return True
+
+
 
 if __name__ == "__main__":
     main()
