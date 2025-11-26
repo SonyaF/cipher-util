@@ -1,5 +1,11 @@
 def main():
-    print("Hello, World! You should probably check out this url: https://thegovernorsgambit.devfest.gdgsrilanka.org/asdfghjklzxcvbnmqwertyuiop")
+    try:
+        keyword = getValidInput("Enter keyword for Encryption: ")
+        keyword = keyword.upper()
+        
+    except KeyboardInterrupt:
+        print("\nExiting...")
+        raise
 
 
 if __name__ == "__main__":
