@@ -1,4 +1,4 @@
-def main():
+    def main():
     try:
         keyword = getValidInput("Enter keyword for Encryption: ")
         keyword = keyword.upper()
@@ -142,5 +142,3 @@ if __name__ == "__main__":
 #  | |\/| |/ _ \| |) | _|  | _ \\ V /  | (_ |   / / _ \| _|| _| (_) | .` |
 #  |_|  |_/_/ \_\___/|___| |___/ |_|    \___|_|_\/_/ \_\_| |_| \___/|_|\_|
                                                                         
-
-
